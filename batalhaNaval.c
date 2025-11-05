@@ -11,10 +11,21 @@ int main() {
     tabuleiro[8][4] = 3;
 
     //codigo do navio na horizontal
-    tabuleiro[3][3] = 3;
-    tabuleiro[3][4] = 3;
-    tabuleiro[3][5] = 3;
+    tabuleiro[5][3] = 3;
+    tabuleiro[5][4] = 3;
+    tabuleiro[5][5] = 3;
 
+    //codigo posicao do navio diagonal principal
+    for (int i = 0; i < 3; i++)
+    {
+        tabuleiro [1 + i] [1 + i] = 3;
+    }
+    
+    //codigo posicao do navio diagonal secundaria
+    for (int i = 0; i < 3; i++)
+    {
+        tabuleiro [i] [9 - i] = 3;
+    }
 
     // cofigo para exibe tabuleiro
     printf("***TABULEIRO***\n");
